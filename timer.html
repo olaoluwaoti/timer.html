@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+ 
+	<title>Countdown Timer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		body {
+			background-color: rgb(23, 23, 55);
+			font-family: Arial, sans-serif;
+			text-align: center;
+			color: white;
+		}
+		h1 {
+			font-size: 3rem;
+			margin-top: 2rem;
+		}
+		.countdown {
+			font-size: 2rem;
+			margin-top: 2rem;
+		}
+	</style>
+</head> 
+
+<body>
+	<h1 style="color: aquamarine;">BMW M5 MODEL GIVE AWAY</h1>
+	<P style="color: aquamarine">Giveaway ends on Friday, 22 MARCH 2024 AT 11:30</P>
+	<img src="SmartSelect_20240226_141035_Google.jpg" height="300" width="300"
+	<br>
+	<p  style="color: rgb(196, 196, 247);"></p> The BMW M4 is a high-performance version of the BMW 4 series, know for its sporty design and powerful engine. It typical features of turbocharged inline-six engine, rear-wheel drive (with optional all-wheel drive),and advanced chassis technology for enhanced driving dynamics. The M4 offers a blend of luxury and performance, making it popular among enthusiast seeking a thrilling driving expirence.</p>
+	<div class="countdown" id="countdown"></div>
+	<script>
+		const countdown = document.getElementById('countdown');
+		const targetDate = new Date('2024-03-22T11:30:00Z').getTime();
+
+		const interval = setInterval(() => {
+			const now = new Date().getTime();
+			const distance = targetDate - now;
+
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+			if (distance < 0) {
+				clearInterval(interval);
+				countdown.innerHTML = 'EXPIRED';3
+			}
+		}, 1000);
+	</script>
+	<h3>Sign up to get your own</h3>
+	 <form>  
+
+     <fieldset> 
+
+        <legend>FILL THE FORM BELOW TP GET THE OFFER</legend>  
+
+        <label>Enter your full name</label><br>  
+        <input type="text" name="name"><br> 
+
+        <label><b>Telephone Number:</label></b><br>  
+		<input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br> 
+
+         <label>Enter your password</label><br>  
+         <input type="password" name="pass"><br> 
+
+         <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  
+
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/> 
+		 <input type="radio" id="gender" name="gender" value="other"/>other <br/>
+
+		  <label>Enter your Birth Month-year </label><br>  
+    <input type="month" name="newMonth">  <br>
+
+		 <br><label>select color</label><br>
+  <input type="radio" name="color" value="red"> Red <br>  
+  <input type="radio" name="color" value="blue"> blue <br>  
+  <input type="radio" name="color" value="green">green <br>  
+  <input type="radio" name="color" value="pink">grey <br>  
+
+     
+     <tr>  
+    <td class="tdLabel"><label for="register_continent" class="label">Select Continent:</label></td> <br>
+    <td><select name="continent" id="register_continent" style="width:160px">
+    <option value="pakistan">Europe</option>  
+    <option value="africa">africa</option>  
+    <option value="china">Asia</option>  
+    <option value="other">south America</option>
+    <option value="other">North America</option><br>
+
+</select>  
+</td>  
+</tr> 
+<br> 
+<a href=https://www.google.com/search?q=BMW+M5+MODEL&oq=BMW+M5+MODEL&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIKCAUQABixAxiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCjIwNDc1ajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8>SIGN-UPS</a>
+     </fieldset>
+     
+  </form>  
+</body>
+</html>
